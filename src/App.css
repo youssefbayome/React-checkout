@@ -1,0 +1,16 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.profile-pic{
+  height: 40vh;
+  width: 60%;
+  
+}
