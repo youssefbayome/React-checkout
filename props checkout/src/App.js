@@ -9,7 +9,7 @@ function App() {
     <Profile
       name="youssef bayoume"
       image="/images/user.jpg"
-      bio="user bio"
+      bio="user bio" 
     />
   );
 }
