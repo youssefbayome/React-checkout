@@ -12,7 +12,7 @@ function Profile({ name, image, bio, profession }) {
   }, [count]);
   return (
     <>
-      <div className="timer text-center p-5">
+      <div className="text-center p-5">
         <span>{("0" + Math.floor((count / 60000) % 100)).slice(-2)}:</span>
         <span>{("0" + Math.floor((count / 1000) % 100)).slice(-2)}:</span>
         <span>{("0" + ((count / 10) % 100)).slice(-2)}</span>
