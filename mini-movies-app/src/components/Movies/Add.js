@@ -1,32 +1,32 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Movies } from "../../Data";
 import "../../App.css";
 
 const AddMovie = () => {
   const [movie, setMovie] = useState({
     Title: "",
-    Images: "",
+    Images: [],
     Plot: "",
     Genre: "",
   });
 
+  const navigate = useNavigate();
   const HandleSubmit = () => {
     Movies.push(movie);
     setMovie({
       Title: "",
-      Images: "",
+      Images: [],
       Plot: "",
       Genre: "",
     });
+    let path = "/";
+    navigate(path);
   };
 
   return (
     <div className="add movie_card">
-      <form
-        
-        className="form"
-        onSubmit={(e) => e.preventDefault()}
-      >
+      <form className="form" onSubmit={(e) => e.preventDefault()}>
         <div className="control">
           <h1>Add Your Favorite Movie</h1>
         </div>
@@ -35,7 +35,6 @@ const AddMovie = () => {
             name="Title"
             placeholder="Title"
             type="text"
-            value={movie.Title}
             onChange={(e) => setMovie({ ...movie, Title: e.target.value })}
           />
           <div className="bg-top">
@@ -86,8 +85,8 @@ const AddMovie = () => {
           <input
             placeholder=" Poster URL"
             type="Text"
-            
-            onChange={(e) => setMovie({ ...movie, Images: e.target.value })}
+            multiple
+            onChange={(e) => setMovie({ ...movie, Images: [e.target.value] })}
           />
           <div className="bg-top">
             <div className="bg-inner"></div>

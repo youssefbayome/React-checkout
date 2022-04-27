@@ -4,18 +4,20 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Components
 import Header from "./components/Header/Header";
 import AddMovie from "./components/Movies/Add";
+import Filter from "./components/Movies/Filter";
 import Movie from "./components/Movies/FetchMovie";
-import SearchBar from "./components/SearchBar/SearchBar";
 import { GlobalStyle } from "./GlobalStyle";
 
 const App = () => (
   <Router>
-    <Header />
-    <SearchBar />
-    <Routes>
-      <Route path="/" element={<Movie />} />
-      <Route path="/Add" element={<AddMovie />} />
-    </Routes>
+    <div>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Movie />} />
+        <Route path="/Add" element={<AddMovie />} />
+      </Routes>
+    </div>
+
     <GlobalStyle />
   </Router>
 );

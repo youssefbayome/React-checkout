@@ -18,7 +18,7 @@ const MovieCard = ({ Year, Title, Images, Plot, Runtime, Genre }) => {
       <div
         className="blur_back bright_back"
         style={{
-          backgroundImage: `url(${Images[2]})`,
+          backgroundImage: `url(${Images[1]})`,
         }}
       ></div>
     </div>

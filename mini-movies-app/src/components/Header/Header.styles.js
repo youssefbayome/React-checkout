@@ -10,15 +10,18 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: var(--maxWidth);
-  // padding: 20px 0;
+  padding: 0 20px;
   margin: 0 auto;
 `;
 
 export const LogoImg = styled.img`
-  width: 100px;
+  width: 120px;
 
   @media screen and (max-width: 500px) {
     width: 120px;
+  }
+  @media screen and (min-width: 500px) {
+    width: 130px;
   }
 `;
 
@@ -26,6 +29,6 @@ export const Add = styled.img`
   width: 80px;
 
   @media screen and (max-width: 500px) {
-    width: 80px;
+    width: 60px;
   }
 `;
