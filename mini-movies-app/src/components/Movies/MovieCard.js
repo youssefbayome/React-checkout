@@ -1,6 +1,14 @@
 import React from "react";
 import "../../App.css";
-const MovieCard = ({ Year, Title, Images, Plot, Runtime, Genre }) => {
+const MovieCard = ({
+  Year,
+  Title,
+  Images,
+  Plot,
+  Runtime,
+  Genre,
+  imdbRating,
+}) => {
   return (
     <div className="movie_card">
       <div className="info_section">
@@ -10,6 +18,7 @@ const MovieCard = ({ Year, Title, Images, Plot, Runtime, Genre }) => {
           <h4>{Year}</h4>
           <span className="minutes">{Runtime}</span>
           <p className="type">{Genre}</p>
+          <p className="text">{imdbRating}</p>
         </div>
         <div className="movie_desc">
           <p className="text">{Plot}</p>
